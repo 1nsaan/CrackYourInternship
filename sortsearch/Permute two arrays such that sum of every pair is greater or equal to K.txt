@@ -1,0 +1,11 @@
+//sort one array in ascending 
+// sort other in descending 
+// if it satisfies for all true else false
+
+
+Arrays.sort(nums1);
+Arrays.sort(nums2, (a,b)-> b-a);
+
+for(int i=0;i<nums1.length;i++)
+        if(nums1[i]+nums2[i] <k) return false;
+return true;
