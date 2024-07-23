@@ -1,0 +1,16 @@
+void solve(){
+
+ int count[] = {0,0,0};
+ Node curr = head;
+ while(curr!=null){
+    count[curr.val]++;
+  }
+ curr=head;
+ int i=0;
+ while(curr!=null){
+    if(count[i]==0)i++;
+    curr.val = i;
+    count[i]--;
+    curr=curr.next;
+	}
+}
