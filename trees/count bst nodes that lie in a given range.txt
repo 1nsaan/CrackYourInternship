@@ -1,0 +1,28 @@
+
+
+//User function Template for Java
+
+class Tree
+{
+   static  List<Integer> io ;
+    public static void inorder(Node root){
+        if(root!=null){
+            inorder(root.left);
+            io.add(root.data);
+            inorder(root.right);
+        }
+    }
+    public static float findMedian(Node root)
+    {
+        io=new ArrayList<>();
+        inorder(root);
+        int n = io.size();
+        if(n==1) return io.get(0);
+        else if(n%2==0){
+            return  (1.0f*(io.get(n/2) + io.get((n/2)-1)))/2;
+        }else{
+            return io.get((int)n/2);
+        }
+     
+    }
+}
